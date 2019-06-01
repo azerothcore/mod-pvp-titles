@@ -1,7 +1,7 @@
 # ![logo](https://raw.githubusercontent.com/azerothcore/azerothcore.github.io/master/images/logo-github.png) AzerothCore
 ## mod-pvptitles 
 ### This is a module for [AzerothCore](http://www.azerothcore.org)
-- Latest build status with azerothcore: [![Build Status](https://travis-ci.org/azerothcore/mod-pvptitles.svg?branch=master)](https://travis-ci.org/azerothcore/mod-pvptitles)
+- Latest build status with azerothcore: [![Build Status](https://travis-ci.org/azerothcore/mod-pvp-titles.svg?branch=master)](https://travis-ci.org/azerothcore/mod-pvp-titles)
 #### Features:
 - Vanilla PvP Titles for Azerothcore obtained with Honorable Kills
 
