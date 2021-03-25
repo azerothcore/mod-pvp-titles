@@ -44,92 +44,103 @@ public:
             const uint32 RANK_13 = sConfigMgr->GetIntDefault("PvPTitles.Rank_13", 20000);
             const uint32 RANK_14 = sConfigMgr->GetIntDefault("PvPTitles.Rank_14", 25000);
 
-			switch (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS))
+			if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_1 )
 			{
-			case RANK_1:
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(15));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(1));
-				break;
-			case RANK_2:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_2 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(16));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(2));
-				break;
-			case RANK_3:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_3 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(17));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(3));
-				break;
-			case RANK_4:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_4 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(18));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(4));
-				break;
-			case RANK_5:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_5 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(19));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(5));
-				break;
-			case RANK_6:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_6 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(20));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(6));
-				break;
-			case RANK_7:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_7 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(21));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(7));
-				break;
-			case RANK_8:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_8 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(22));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(8));
-				break;
-			case RANK_9:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_9 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(23));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(9));
-				break;
-			case RANK_10:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_10 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(24));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(10));
-				break;
-			case RANK_11:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_11 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(25));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(11));
-				break;
-			case RANK_12:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_12 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(26));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(12));
-				break;
-			case RANK_13:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_13 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(27));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(13));
-				break;
-			case RANK_14:
+			}
+			else if (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS) == RANK_14 )
+			{
 				if (team == TEAM_HORDE)
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(28));
 				else
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(14));
-				break;
 			}
 		}
 	}
