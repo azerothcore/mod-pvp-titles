@@ -44,7 +44,7 @@ public:
             const uint32 RANK_13 = sConfigMgr->GetIntDefault("PvPTitles.Rank_13", 20000);
             const uint32 RANK_14 = sConfigMgr->GetIntDefault("PvPTitles.Rank_14", 25000);
 
-			constexpr uint32 PVP_LIFETIME_HONORABLE_KILLS = Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS);
+            constexpr uint32 PVP_LIFETIME_HONORABLE_KILLS = Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS);
 
 			if (PVP_LIFETIME_HONORABLE_KILLS == RANK_1 )
 			{
