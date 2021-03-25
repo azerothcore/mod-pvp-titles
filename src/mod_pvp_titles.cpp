@@ -5,20 +5,20 @@
 
 enum Ranks
 {
-	RANK_1	= sConfigMgr->GetIntDefault("PvPTitles.Rank_1", 50),
-	RANK_2	= sConfigMgr->GetIntDefault("PvPTitles.Rank_2", 100),
-	RANK_3	= sConfigMgr->GetIntDefault("PvPTitles.Rank_3", 500),
-	RANK_4	= sConfigMgr->GetIntDefault("PvPTitles.Rank_4", 1000),
-	RANK_5	= sConfigMgr->GetIntDefault("PvPTitles.Rank_5", 2000),
-	RANK_6	= sConfigMgr->GetIntDefault("PvPTitles.Rank_6", 4000),
-	RANK_7	= sConfigMgr->GetIntDefault("PvPTitles.Rank_7", 5000),
-	RANK_8	= sConfigMgr->GetIntDefault("PvPTitles.Rank_8", 6000),
-	RANK_9	= sConfigMgr->GetIntDefault("PvPTitles.Rank_9", 8000),
-	RANK_10 = sConfigMgr->GetIntDefault("PvPTitles.Rank_10", 10000),
-	RANK_11 = sConfigMgr->GetIntDefault("PvPTitles.Rank_11", 12500),
-	RANK_12 = sConfigMgr->GetIntDefault("PvPTitles.Rank_12", 15000),
-	RANK_13 = sConfigMgr->GetIntDefault("PvPTitles.Rank_13", 20000),
-	RANK_14 = sConfigMgr->GetIntDefault("PvPTitles.Rank_14", 25000),
+	RANK_1	= 50,
+	RANK_2	= 100,
+	RANK_3	= 500,
+	RANK_4	= 1000,
+	RANK_5	= 2000,
+	RANK_6	= 4000,
+	RANK_7	= 5000,
+	RANK_8	= 6000,
+	RANK_9	= 8000,
+	RANK_10 = 10000,
+	RANK_11 = 12500,
+	RANK_12 = 15000,
+	RANK_13 = 20000,
+	RANK_14 = 25000,
 };
 
 class PVPTitles : public PlayerScript
@@ -46,6 +46,21 @@ public:
 
 			uint32 team = Killer->GetTeamId();
 //			uint32 PlusKill = 14;
+
+            RANK_1	= sConfigMgr->GetIntDefault("PvPTitles.Rank_1", 50);
+            RANK_2	= sConfigMgr->GetIntDefault("PvPTitles.Rank_2", 100);
+            RANK_3	= sConfigMgr->GetIntDefault("PvPTitles.Rank_3", 500);
+            RANK_4	= sConfigMgr->GetIntDefault("PvPTitles.Rank_4", 1000);
+            RANK_5	= sConfigMgr->GetIntDefault("PvPTitles.Rank_5", 2000);
+            RANK_6	= sConfigMgr->GetIntDefault("PvPTitles.Rank_6", 4000);
+            RANK_7	= sConfigMgr->GetIntDefault("PvPTitles.Rank_7", 5000);
+            RANK_8	= sConfigMgr->GetIntDefault("PvPTitles.Rank_8", 6000);
+            RANK_9	= sConfigMgr->GetIntDefault("PvPTitles.Rank_9", 8000);
+            RANK_10 = sConfigMgr->GetIntDefault("PvPTitles.Rank_10", 10000);
+            RANK_11 = sConfigMgr->GetIntDefault("PvPTitles.Rank_11", 12500);
+            RANK_12 = sConfigMgr->GetIntDefault("PvPTitles.Rank_12", 15000);
+            RANK_13 = sConfigMgr->GetIntDefault("PvPTitles.Rank_13", 20000);
+            RANK_14 = sConfigMgr->GetIntDefault("PvPTitles.Rank_14", 25000);
 
 			switch (Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS))
 			{
