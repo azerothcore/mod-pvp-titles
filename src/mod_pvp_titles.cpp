@@ -29,6 +29,8 @@ public:
 			uint32 team = Killer->GetTeamId();
 //			uint32 PlusKill = 14;
 
+            const uint32 PVP_LIFETIME_HONORABLE_KILLS = Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS);
+            
             const uint32 RANK_1	= sConfigMgr->GetIntDefault("PvPTitles.Rank_1", 50);
             const uint32 RANK_2	= sConfigMgr->GetIntDefault("PvPTitles.Rank_2", 100);
             const uint32 RANK_3	= sConfigMgr->GetIntDefault("PvPTitles.Rank_3", 500);
@@ -43,8 +45,6 @@ public:
             const uint32 RANK_12 = sConfigMgr->GetIntDefault("PvPTitles.Rank_12", 15000);
             const uint32 RANK_13 = sConfigMgr->GetIntDefault("PvPTitles.Rank_13", 20000);
             const uint32 RANK_14 = sConfigMgr->GetIntDefault("PvPTitles.Rank_14", 25000);
-
-            constexpr uint32 PVP_LIFETIME_HONORABLE_KILLS = Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS);
 
 			if (PVP_LIFETIME_HONORABLE_KILLS == RANK_1 )
 			{
