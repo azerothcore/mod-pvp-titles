@@ -3,23 +3,20 @@
 #include "Player.h"
 #include "Chat.h"
 
-enum Ranks
-{
-	RANK_1	= 50,
-	RANK_2	= 100,
-	RANK_3	= 500,
-	RANK_4	= 1000,
-	RANK_5	= 2000,
-	RANK_6	= 4000,
-	RANK_7	= 5000,
-	RANK_8	= 6000,
-	RANK_9	= 8000,
-	RANK_10 = 10000,
-	RANK_11 = 12500,
-	RANK_12 = 15000,
-	RANK_13 = 20000,
-	RANK_14 = 25000,
-};
+uint32 RANK_1 = 50;
+uint32 RANK_2 = 100;
+uint32 RANK_3 = 500;
+uint32 RANK_4 = 1000;
+uint32 RANK_5 = 2000;
+uint32 RANK_6 = 4000;
+uint32 RANK_7 = 5000;
+uint32 RANK_8 = 6000;
+uint32 RANK_9 = 8000;
+uint32 RANK_10 = 10000;
+uint32 RANK_11 = 12500;
+uint32 RANK_12 = 15000;
+uint32 RANK_13 = 20000;
+uint32 RANK_14 = 25000;
 
 class PVPTitles : public PlayerScript
 {
