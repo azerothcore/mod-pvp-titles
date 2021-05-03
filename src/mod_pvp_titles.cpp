@@ -46,7 +46,7 @@ public:
             const uint32 RANK_13 = sConfigMgr->GetIntDefault("PvPTitles.Rank_13", 20000);
             const uint32 RANK_14 = sConfigMgr->GetIntDefault("PvPTitles.Rank_14", 25000);
 
-			if (PVP_LIFETIME_HONORABLE_KILLS == RANK_1 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_1 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -57,7 +57,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(1));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_2 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_2 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -68,7 +68,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(2));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_3 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_3 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -79,7 +79,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(3));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_4 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_4 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -90,7 +90,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(4));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_5 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_5 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -101,7 +101,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(5));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_6 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_6 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -112,7 +112,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(6));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_7 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_7 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -123,7 +123,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(7));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_8 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_8 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -134,7 +134,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(8));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_9 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_9 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -145,7 +145,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(9));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_10 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_10 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -156,7 +156,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(10));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_11 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_11 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -167,7 +167,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(11));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_12 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_12 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -178,7 +178,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(12));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_13 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_13 )
 			{
 				if (team == TEAM_HORDE)
 				{
@@ -189,7 +189,7 @@ public:
 					Killer->SetTitle(sCharTitlesStore.LookupEntry(13));
 				}
 			}
-			else if (PVP_LIFETIME_HONORABLE_KILLS == RANK_14 )
+			if (PVP_LIFETIME_HONORABLE_KILLS >= RANK_14 )
 			{
 				if (team == TEAM_HORDE)
 				{
