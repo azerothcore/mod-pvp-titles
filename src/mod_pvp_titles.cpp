@@ -26,7 +26,7 @@ public:
             if (Killer->GetGUID() == Killed->GetGUID())
                 return;
 
-            uint32 team = Killer->GetTeamId();
+            uint32 team = Killer->GetTeamId(true);
 //			uint32 PlusKill = 14;
 
             const uint32 PVP_LIFETIME_HONORABLE_KILLS = Killer->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS);
@@ -55,7 +55,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(15));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(1)))
                     {
@@ -72,7 +72,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(16));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(2)))
                     {
@@ -89,7 +89,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(17));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(3)))
                     {
@@ -106,7 +106,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(18));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(4)))
                     {
@@ -123,7 +123,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(19));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(5)))
                     {
@@ -140,7 +140,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(20));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(6)))
                     {
@@ -157,7 +157,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(21));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(7)))
                     {
@@ -174,7 +174,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(22));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(8)))
                     {
@@ -191,7 +191,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(23));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(9)))
                     {
@@ -208,7 +208,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(24));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(10)))
                     {
@@ -225,7 +225,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(25));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(11)))
                     {
@@ -242,7 +242,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(26));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(12)))
                     {
@@ -259,7 +259,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(27));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(13)))
                     {
@@ -276,7 +276,7 @@ public:
                         Killer->SetTitle(sCharTitlesStore.LookupEntry(28));
                     }
                 }
-                if (team == TEAM_ALLIANCE)
+                else if (team == TEAM_ALLIANCE)
                 {
                     if (!Killer->HasTitle(sCharTitlesStore.LookupEntry(14)))
                     {
