@@ -6,7 +6,7 @@
 
 # Enable the module? (1: true | 0: false)
 
-PvPTitles.Enable = 1
+PvPTitles.Enable = 0
 
 # Announce the module when the player logs in?
 
