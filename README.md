@@ -12,7 +12,8 @@
 ### How to install
 1. Simply place the module under the `modules` folder of your AzerothCore source folder.
 2. Re-run cmake and launch a clean build of AzerothCore
-3. Log in game, kill 50 enemy players and see the result. You can make a macro for that with `.die` and `.revive`
+3. Create the mod_pvptitles.conf based on `mod_pvptitles.conf.dist` in your config folder and enable the module 
+4. Log in game, kill 50 enemy players and see the result. You can make a macro for that with `.die` and `.revive`
 
 
 ## Credits

@@ -10,7 +10,7 @@ public:
 
     void OnLogin(Player *player) override
     {
-        if (sConfigMgr->GetBoolDefault("PvPTitles.Enable", true))
+        if (sConfigMgr->GetBoolDefault("PvPTitles.Enable", false))
         {
             if (sConfigMgr->GetBoolDefault("PvPTitles.Announce", true))
             {
@@ -21,7 +21,7 @@ public:
 
     void OnPVPKill(Player *Killer, Player *Killed) override
     {
-        if (sConfigMgr->GetBoolDefault("PvPTitles.Enable", true))
+        if (sConfigMgr->GetBoolDefault("PvPTitles.Enable", false))
         {
             if (Killer->GetGUID() == Killed->GetGUID())
                 return;

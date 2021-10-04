@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        compiler: [clang6, clang9, clang10]
+        compiler: [clang]
     runs-on: ubuntu-20.04
     name: ${{ matrix.compiler }}
     env:
@@ -28,7 +28,7 @@ jobs:
       - name: Cache
         uses: actions/cache@v2
         with:
-          path: /home/runner/.ccache
+          path: var/ccache
           key: ccache:${{ matrix.compiler }}:${{ github.ref }}:${{ github.sha }}
           restore-keys: |
             ccache:${{ matrix.compiler }}:${{ github.ref }}
