@@ -96,28 +96,28 @@ enum FeatsOfStrength
     FOS_LIEUTENANT_COMMANDER  = 436,
     FOS_KNIGHT_CHAMPION       = 437,
     FOS_KNIGHT_CAPTAIN        = 438,
+    FOS_KNIGHT_LIEUTENANT     = 472,
     FOS_KNIGHT                = 439,
     FOS_SERGEANT_MAJOR        = 440,
     FOS_MASTER_SERGEANT       = 441,
-    FOS_KNIGHT_LIEUTENANT     = 472,
     FOS_SARGEANT              = 471,
     FOS_CORPORAL              = 470,
     FOS_PRIVATE               = 442,
 
     FOS_HIGH_WARLORD          = 443,
-    FOS_LIEUTENANT_GENERAL    = 444,
     FOS_WARLORD               = 445,
     FOS_GENERAL               = 446,
+    FOS_LIEUTENANT_GENERAL    = 444,
     FOS_CHAMPION              = 447,
     FOS_CENTURION             = 448,
-    FOS_BLOOD_GUARD           = 449,
-    FOS_SENIOR_SERGEANT       = 450,
     FOS_LEGIONNAIRE           = 469,
+    FOS_BLOOD_GUARD           = 449,
     FOS_STONE_GUARD           = 451,
     FOS_FIRST_SARGEANT        = 452,
+    FOS_SENIOR_SERGEANT       = 450,
     FOS_SARGEANT_H            = 453,
     FOS_GRUNT                 = 468,
-    FOS_SCOUT                 = 454,
+    FOS_SCOUT                 = 454
 };
 
 enum CleanUpTitlesModes
