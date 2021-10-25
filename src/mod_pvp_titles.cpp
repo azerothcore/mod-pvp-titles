@@ -5,7 +5,7 @@
 
 struct PvPTitles
 {
-    int32 RequiredKills;
+    uint32 RequiredKills;
     uint32 TitleId;
     uint32 FeatOfStrength;
 };
