@@ -28,3 +28,18 @@ PvPTitles.Rank_11 = 12500
 PvPTitles.Rank_12 = 15000
 PvPTitles.Rank_13 = 20000
 PvPTitles.Rank_14 = 25000
+
+# Award titles on login if players meet their kill count requirement?
+
+PvPTitles.AwardTitlesOnLogin = 0
+
+# Award feat of strength achievements when players earn titles?
+
+PvPTitles.EnableFeatOfStrength = 0
+
+# Clean up titles when players login?
+# Options:    0 - Disabled
+#             1 - Remove all titles (achievements will not be removed).
+#             2 - Remove invalid titles (if the kill count requirement is no longer met)
+
+PvPTitles.CleanUp = 0
