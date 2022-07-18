@@ -185,7 +185,7 @@ public:
     void AwardEarnedTitles(Player* me)
     {
         TeamId teamId = me->GetTeamId(true);
-        uint32 kills  = me->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS);
+        uint32 kills = me->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS);
 
         PvPTitles const pvpTitlesList[14] =
         {
@@ -212,6 +212,20 @@ public:
                 me->SetTitle(sCharTitlesStore.LookupEntry(title.TitleId));
 
                 if (sConfigMgr->GetOption<bool>("PvPTitles.AwardFeatOfStrength", false))
+                {
+                    if (AchievementEntry const* achievementEntry = sAchievementStore.LookupEntry(title.FeatOfStrength))
+                    {
+                        me->CompletedAchievement(achievementEntry);
+                    }
+                }
+            }
+        }
+
+        if (sConfigMgr->GetOption<bool>("PvPTitles.AwardFeatOfStrength", false))
+        {
+            for (PvPTitles title : pvpTitlesList)
+            {
+                if (kills >= title.RequiredKills && !me->HasAchieved(title.FeatOfStrength))
                 {
                     if (AchievementEntry const* achievementEntry = sAchievementStore.LookupEntry(title.FeatOfStrength))
                     {
