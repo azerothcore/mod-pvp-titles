@@ -210,14 +210,6 @@ public:
             if (kills >= title.RequiredKills && !me->HasTitle(title.TitleId))
             {
                 me->SetTitle(sCharTitlesStore.LookupEntry(title.TitleId));
-
-                if (sConfigMgr->GetOption<bool>("PvPTitles.AwardFeatOfStrength", false))
-                {
-                    if (AchievementEntry const* achievementEntry = sAchievementStore.LookupEntry(title.FeatOfStrength))
-                    {
-                        me->CompletedAchievement(achievementEntry);
-                    }
-                }
             }
         }
 
