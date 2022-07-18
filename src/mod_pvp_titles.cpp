@@ -187,24 +187,6 @@ public:
         TeamId teamId = me->GetTeamId(true);
         uint32 kills  = me->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS);
 
-        if (me->HasTitle(GRAND_MARSHAL) || me->HasTitle(HIGH_WARLORD))
-        {
-            if (sConfigMgr->GetOption<bool>("PvPTitles.EnableFeatOfStrength", false))
-            {
-                if (me->HasAchieved(FOS_GRAND_MARSHAL) || me->HasAchieved(FOS_HIGH_WARLORD))
-                {
-                    // We already got the highest achievement, so there's no point checking anything else.
-                    return;
-                }
-            }
-            else
-            {
-                // We already got the highest title and we are not awarding achievements.
-                // So there's no need to check anything else.
-                return;
-            }
-        }
-
         PvPTitles const pvpTitlesList[14] =
         {
             { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_1", RANK_ONE_HK_COUNT), TitleData[RANK_ONE].TitleId[teamId], TitleData[RANK_ONE].FeatOfStrength[teamId] },
