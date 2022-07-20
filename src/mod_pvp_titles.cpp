@@ -185,25 +185,7 @@ public:
     void AwardEarnedTitles(Player* me)
     {
         TeamId teamId = me->GetTeamId(true);
-        uint32 kills  = me->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS);
-
-        if (me->HasTitle(GRAND_MARSHAL) || me->HasTitle(HIGH_WARLORD))
-        {
-            if (sConfigMgr->GetOption<bool>("PvPTitles.EnableFeatOfStrength", false))
-            {
-                if (me->HasAchieved(FOS_GRAND_MARSHAL) || me->HasAchieved(FOS_HIGH_WARLORD))
-                {
-                    // We already got the highest achievement, so there's no point checking anything else.
-                    return;
-                }
-            }
-            else
-            {
-                // We already got the highest title and we are not awarding achievements.
-                // So there's no need to check anything else.
-                return;
-            }
-        }
+        uint32 kills = me->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS);
 
         PvPTitles const pvpTitlesList[14] =
         {
@@ -228,8 +210,14 @@ public:
             if (kills >= title.RequiredKills && !me->HasTitle(title.TitleId))
             {
                 me->SetTitle(sCharTitlesStore.LookupEntry(title.TitleId));
+            }
+        }
 
-                if (sConfigMgr->GetOption<bool>("PvPTitles.AwardFeatOfStrength", false))
+        if (sConfigMgr->GetOption<bool>("PvPTitles.AwardFeatOfStrength", false))
+        {
+            for (PvPTitles title : pvpTitlesList)
+            {
+                if (kills >= title.RequiredKills && !me->HasAchieved(title.FeatOfStrength))
                 {
                     if (AchievementEntry const* achievementEntry = sAchievementStore.LookupEntry(title.FeatOfStrength))
                     {
