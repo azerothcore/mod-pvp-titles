@@ -35,7 +35,7 @@ PvPTitles.AwardTitlesOnLogin = 0
 
 # Award feat of strength achievements when players earn titles?
 
-PvPTitles.EnableFeatOfStrength = 0
+PvPTitles.AwardFeatOfStrength = 0
 
 # Clean up titles when players login?
 # Options:    0 - Disabled
