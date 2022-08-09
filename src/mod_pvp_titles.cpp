@@ -217,7 +217,7 @@ public:
         {
             for (PvPTitles title : pvpTitlesList)
             {
-                if (kills >= title.RequiredKills && !me->HasAchieved(title.FeatOfStrength))
+                if (kills >= title.RequiredKills)
                 {
                     if (AchievementEntry const* achievementEntry = sAchievementStore.LookupEntry(title.FeatOfStrength))
                     {
