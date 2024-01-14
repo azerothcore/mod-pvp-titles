@@ -7,13 +7,11 @@ struct PvPTitles
 {
     uint32 RequiredKills;
     uint32 TitleId;
-    uint32 FeatOfStrength;
 };
 
 struct PvPTitleData
 {
     uint32 TitleId[2];
-    uint32 FeatOfStrength[2];
 };
 
 enum Ranks
@@ -87,39 +85,6 @@ enum Titles
     HIGH_WARLORD             = 28
 };
 
-enum FeatsOfStrength
-{
-    FOS_GRAND_MARSHAL         = 433,
-    FOS_FIELD_MARSHAL         = 434,
-    FOS_MARSHAL               = 473,
-    FOS_COMMANDER             = 435,
-    FOS_LIEUTENANT_COMMANDER  = 436,
-    FOS_KNIGHT_CHAMPION       = 437,
-    FOS_KNIGHT_CAPTAIN        = 438,
-    FOS_KNIGHT_LIEUTENANT     = 472,
-    FOS_KNIGHT                = 439,
-    FOS_SERGEANT_MAJOR        = 440,
-    FOS_MASTER_SERGEANT       = 441,
-    FOS_SARGEANT              = 471,
-    FOS_CORPORAL              = 470,
-    FOS_PRIVATE               = 442,
-
-    FOS_HIGH_WARLORD          = 443,
-    FOS_WARLORD               = 445,
-    FOS_GENERAL               = 446,
-    FOS_LIEUTENANT_GENERAL    = 444,
-    FOS_CHAMPION              = 447,
-    FOS_CENTURION             = 448,
-    FOS_LEGIONNAIRE           = 469,
-    FOS_BLOOD_GUARD           = 449,
-    FOS_STONE_GUARD           = 451,
-    FOS_FIRST_SARGEANT        = 452,
-    FOS_SENIOR_SERGEANT       = 450,
-    FOS_SARGEANT_H            = 453,
-    FOS_GRUNT                 = 468,
-    FOS_SCOUT                 = 454
-};
-
 enum CleanUpTitlesModes
 {
     CLEAN_UP_NONE             = 0, // Disabled.
@@ -129,20 +94,20 @@ enum CleanUpTitlesModes
 
 PvPTitleData const TitleData[14] =
 {
-    { { PRIVATE,              SCOUT              }, { FOS_PRIVATE,              FOS_SCOUT              } },
-    { { CORPORAL,             GRUNT              }, { FOS_CORPORAL,             FOS_GRUNT              } },
-    { { SERGEANT,             SERGEANT_H         }, { FOS_SARGEANT,             FOS_SARGEANT_H         } },
-    { { MASTER_SERGEANT,      SENIOR_SERGEANT    }, { FOS_MASTER_SERGEANT,      FOS_SENIOR_SERGEANT    } },
-    { { SERGEANT_MAJOR,       FIRST_SERGEANT     }, { FOS_SERGEANT_MAJOR,       FOS_FIRST_SARGEANT     } },
-    { { KNIGHT,               STONE_GUARD        }, { FOS_KNIGHT,               FOS_STONE_GUARD        } },
-    { { KNIGHT_LIEUTENANT,    BLOOD_GUARD        }, { FOS_KNIGHT_LIEUTENANT,    FOS_BLOOD_GUARD        } },
-    { { KNIGHT_CAPTAIN,       LEGIONNAIRE        }, { FOS_KNIGHT_CAPTAIN,       FOS_LEGIONNAIRE        } },
-    { { KNIGHT_CHAMPION,      CENTURION          }, { FOS_KNIGHT_CHAMPION,      FOS_CENTURION          } },
-    { { LIEUTENANT_COMMANDER, CHAMPION           }, { FOS_LIEUTENANT_COMMANDER, FOS_CHAMPION           } },
-    { { COMMANDER,            LIEUTENANT_GENERAL }, { FOS_COMMANDER,            FOS_LIEUTENANT_GENERAL } },
-    { { MARSHAL,              GENERAL            }, { FOS_MARSHAL,              FOS_GENERAL            } },
-    { { FIELD_MARSHAL,        WARLORD            }, { FOS_FIELD_MARSHAL,        FOS_WARLORD            } },
-    { { GRAND_MARSHAL,        HIGH_WARLORD       }, { FOS_GRAND_MARSHAL,        FOS_HIGH_WARLORD       } }
+    { PRIVATE,              SCOUT              },
+    { CORPORAL,             GRUNT              },
+    { SERGEANT,             SERGEANT_H         },
+    { MASTER_SERGEANT,      SENIOR_SERGEANT    },
+    { SERGEANT_MAJOR,       FIRST_SERGEANT     },
+    { KNIGHT,               STONE_GUARD        },
+    { KNIGHT_LIEUTENANT,    BLOOD_GUARD        },
+    { KNIGHT_CAPTAIN,       LEGIONNAIRE        },
+    { KNIGHT_CHAMPION,      CENTURION          },
+    { LIEUTENANT_COMMANDER, CHAMPION           },
+    { COMMANDER,            LIEUTENANT_GENERAL },
+    { MARSHAL,              GENERAL            },
+    { FIELD_MARSHAL,        WARLORD            },
+    { GRAND_MARSHAL,        HIGH_WARLORD       }
 };
 
 class PVPTitles : public PlayerScript
@@ -189,20 +154,20 @@ public:
 
         PvPTitles const pvpTitlesList[14] =
         {
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_1", RANK_ONE_HK_COUNT), TitleData[RANK_ONE].TitleId[teamId], TitleData[RANK_ONE].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_2", RANK_TWO_HK_COUNT), TitleData[RANK_TWO].TitleId[teamId], TitleData[RANK_TWO].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_3", RANK_THREE_HK_COUNT), TitleData[RANK_THREE].TitleId[teamId], TitleData[RANK_THREE].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_4", RANK_FOUR_HK_COUNT), TitleData[RANK_FOUR].TitleId[teamId], TitleData[RANK_FOUR].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_5", RANK_FIVE_HK_COUNT), TitleData[RANK_FIVE].TitleId[teamId], TitleData[RANK_FIVE].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_6", RANK_SIX_HK_COUNT), TitleData[RANK_SIX].TitleId[teamId], TitleData[RANK_SIX].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_7", RANK_SEVEN_HK_COUNT), TitleData[RANK_SEVEN].TitleId[teamId], TitleData[RANK_SEVEN].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_8", RANK_EIGHT_HK_COUNT), TitleData[RANK_EIGHT].TitleId[teamId], TitleData[RANK_EIGHT].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_9", RANK_NINE_HK_COUNT), TitleData[RANK_NINE].TitleId[teamId], TitleData[RANK_NINE].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_10", RANK_TEN_HK_COUNT), TitleData[RANK_TEN].TitleId[teamId], TitleData[RANK_TEN].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_11", RANK_ELEVEN_HK_COUNT), TitleData[RANK_ELEVEN].TitleId[teamId], TitleData[RANK_ELEVEN].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_12", RANK_TWELVE_HK_COUNT), TitleData[RANK_TWELVE].TitleId[teamId], TitleData[RANK_TWELVE].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_13", RANK_THIRTEEN_HK_COUNT), TitleData[RANK_THIRTEEN].TitleId[teamId], TitleData[RANK_THIRTEEN].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_14", RANK_FOURTEEN_HK_COUNT), TitleData[RANK_FOURTEEN].TitleId[teamId], TitleData[RANK_FOURTEEN].FeatOfStrength[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_1", RANK_ONE_HK_COUNT), TitleData[RANK_ONE].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_2", RANK_TWO_HK_COUNT), TitleData[RANK_TWO].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_3", RANK_THREE_HK_COUNT), TitleData[RANK_THREE].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_4", RANK_FOUR_HK_COUNT), TitleData[RANK_FOUR].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_5", RANK_FIVE_HK_COUNT), TitleData[RANK_FIVE].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_6", RANK_SIX_HK_COUNT), TitleData[RANK_SIX].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_7", RANK_SEVEN_HK_COUNT), TitleData[RANK_SEVEN].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_8", RANK_EIGHT_HK_COUNT), TitleData[RANK_EIGHT].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_9", RANK_NINE_HK_COUNT), TitleData[RANK_NINE].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_10", RANK_TEN_HK_COUNT), TitleData[RANK_TEN].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_11", RANK_ELEVEN_HK_COUNT), TitleData[RANK_ELEVEN].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_12", RANK_TWELVE_HK_COUNT), TitleData[RANK_TWELVE].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_13", RANK_THIRTEEN_HK_COUNT), TitleData[RANK_THIRTEEN].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_14", RANK_FOURTEEN_HK_COUNT), TitleData[RANK_FOURTEEN].TitleId[teamId] },
         };
 
         for (PvPTitles title : pvpTitlesList)
@@ -210,20 +175,6 @@ public:
             if (kills >= title.RequiredKills && !me->HasTitle(title.TitleId))
             {
                 me->SetTitle(sCharTitlesStore.LookupEntry(title.TitleId));
-            }
-        }
-
-        if (sConfigMgr->GetOption<bool>("PvPTitles.AwardFeatOfStrength", false))
-        {
-            for (PvPTitles title : pvpTitlesList)
-            {
-                if (kills >= title.RequiredKills)
-                {
-                    if (AchievementEntry const* achievementEntry = sAchievementStore.LookupEntry(title.FeatOfStrength))
-                    {
-                        me->CompletedAchievement(achievementEntry);
-                    }
-                }
             }
         }
     }
@@ -234,20 +185,20 @@ public:
 
         PvPTitles const pvpTitlesList[14] =
         {
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_1", RANK_ONE_HK_COUNT), TitleData[RANK_ONE].TitleId[teamId], TitleData[RANK_ONE].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_2", RANK_TWO_HK_COUNT), TitleData[RANK_TWO].TitleId[teamId], TitleData[RANK_TWO].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_3", RANK_THREE_HK_COUNT), TitleData[RANK_THREE].TitleId[teamId], TitleData[RANK_THREE].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_4", RANK_FOUR_HK_COUNT), TitleData[RANK_FOUR].TitleId[teamId], TitleData[RANK_FOUR].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_5", RANK_FIVE_HK_COUNT), TitleData[RANK_FIVE].TitleId[teamId], TitleData[RANK_FIVE].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_6", RANK_SIX_HK_COUNT), TitleData[RANK_SIX].TitleId[teamId], TitleData[RANK_SIX].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_7", RANK_SEVEN_HK_COUNT), TitleData[RANK_SEVEN].TitleId[teamId], TitleData[RANK_SEVEN].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_8", RANK_EIGHT_HK_COUNT), TitleData[RANK_EIGHT].TitleId[teamId], TitleData[RANK_EIGHT].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_9", RANK_NINE_HK_COUNT), TitleData[RANK_NINE].TitleId[teamId], TitleData[RANK_NINE].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_10", RANK_TEN_HK_COUNT), TitleData[RANK_TEN].TitleId[teamId], TitleData[RANK_TEN].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_11", RANK_ELEVEN_HK_COUNT), TitleData[RANK_ELEVEN].TitleId[teamId], TitleData[RANK_ELEVEN].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_12", RANK_TWELVE_HK_COUNT), TitleData[RANK_TWELVE].TitleId[teamId], TitleData[RANK_TWELVE].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_13", RANK_THIRTEEN_HK_COUNT), TitleData[RANK_THIRTEEN].TitleId[teamId], TitleData[RANK_THIRTEEN].FeatOfStrength[teamId] },
-            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_14", RANK_FOURTEEN_HK_COUNT), TitleData[RANK_FOURTEEN].TitleId[teamId], TitleData[RANK_FOURTEEN].FeatOfStrength[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_1", RANK_ONE_HK_COUNT), TitleData[RANK_ONE].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_2", RANK_TWO_HK_COUNT), TitleData[RANK_TWO].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_3", RANK_THREE_HK_COUNT), TitleData[RANK_THREE].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_4", RANK_FOUR_HK_COUNT), TitleData[RANK_FOUR].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_5", RANK_FIVE_HK_COUNT), TitleData[RANK_FIVE].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_6", RANK_SIX_HK_COUNT), TitleData[RANK_SIX].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_7", RANK_SEVEN_HK_COUNT), TitleData[RANK_SEVEN].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_8", RANK_EIGHT_HK_COUNT), TitleData[RANK_EIGHT].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_9", RANK_NINE_HK_COUNT), TitleData[RANK_NINE].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_10", RANK_TEN_HK_COUNT), TitleData[RANK_TEN].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_11", RANK_ELEVEN_HK_COUNT), TitleData[RANK_ELEVEN].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_12", RANK_TWELVE_HK_COUNT), TitleData[RANK_TWELVE].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_13", RANK_THIRTEEN_HK_COUNT), TitleData[RANK_THIRTEEN].TitleId[teamId] },
+            { sConfigMgr->GetOption<uint32>("PvPTitles.Rank_14", RANK_FOURTEEN_HK_COUNT), TitleData[RANK_FOURTEEN].TitleId[teamId] },
         };
 
         for (PvPTitles title : pvpTitlesList)

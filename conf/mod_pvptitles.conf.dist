@@ -33,10 +33,6 @@ PvPTitles.Rank_14 = 25000
 
 PvPTitles.AwardTitlesOnLogin = 0
 
-# Award feat of strength achievements when players earn titles?
-
-PvPTitles.AwardFeatOfStrength = 0
-
 # Clean up titles when players login?
 # Options:    0 - Disabled
 #             1 - Remove all titles (achievements will not be removed).
